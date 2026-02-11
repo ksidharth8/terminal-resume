@@ -11,8 +11,12 @@ export function buildResumeContext() {
 name: ${profile.name}
 role: ${profile.role}
 location: ${profile.location}
+phone: ${profile.phone}
 email: ${profile.email}
 summary: ${profile.summary}
+links: ${Object.entries(profile.links)
+		.map(([k, v]) => `${k}: ${v}`)
+		.join(" | ")}
 
 === EDUCATION ===
 ${education
@@ -34,6 +38,7 @@ name: ${p.name}
 status: ${p.status}
 one_liner: ${p.oneLiner}
 description: ${p.description}
+highlights: ${p.highlights.join(" | ")}
 tech: ${p.tech.join(", ")}
 live: ${p.live}
 repo: ${p.repo}

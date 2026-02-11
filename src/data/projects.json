@@ -17,7 +17,7 @@
 	},
 	{
 		"name": "HireSight",
-		"status": "ongoing",
+		"status": "completed",
 		"oneLiner": "AI-powered SaaS platform for resume scoring, job matching, and interview simulation.",
 		"description": "Developed a full-stack career platform with resume analysis, weighted job-skill matching, and AI-driven interview feedback.",
 		"tech": [

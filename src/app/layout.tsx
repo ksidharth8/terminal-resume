@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-	title: "Sidharth Kumar | Terminal Resume",
-	description: "Interactive terminal-style resume of a software developer.",
+	title: "Kumar Sidharth | Terminal Resume",
+	description: "Interactive terminal-style resume.",
 };
 
 export default function RootLayout({
