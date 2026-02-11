@@ -1,36 +1,213 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Terminal Resume — Interactive CLI Portfolio
 
-## Getting Started
+An interactive, browser-based terminal that showcases my resume through a command-line interface.
 
-First, run the development server:
+Built to demonstrate system design thinking, command architecture, AI grounding, and frontend engineering — not just visual creativity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Overview
+
+Terminal Resume is a fully interactive CLI-inspired portfolio built using Next.js and TypeScript.
+
+It replicates real shell behavior including:
+
+- Command parsing
+- Autocomplete (Tab cycling)
+- History navigation (↑ ↓)
+- Theme switching
+- Manual pages (`man`)
+- Typo suggestions
+- Session persistence
+- Grounded AI assistant (`ask`)
+
+The project is designed with clean separation of concerns and modular architecture.
+
+---
+
+## Key Features
+
+### Interactive CLI Engine
+- Command registry system
+- Structured parser
+- Context-based execution model
+- Modular command metadata
+
+### Theme System
+- Dracula
+- Nord
+- Gruvbox
+- Solarized
+- Tokyo Night
+- Default
+
+Theme changes persist across sessions.
+
+### AI-Powered `ask` Command
+- Fully grounded in structured JSON resume data
+- No hallucination policy
+- Strict prompt constraints
+- Deterministic low-temperature generation
+- Clickable link rendering
+- Markdown-resistant formatting layer
+
+Example:
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ask What projects has he built with repo links
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Manual Pages
+Unix-style manual system:
+```
 
-## Learn More
+man
+man projects
+man ask
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Autocomplete
+- First-word completion
+- Second-word completion
+- Flag completion
+- Cycling support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Typo Suggestions
+```
 
-## Deploy on Vercel
+projecs
+→ Did you mean: projects ?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Session Persistence
+- Theme persistence (localStorage)
+- History persistence
+- Boot sequence session control
+
+---
+
+## Architecture
+
+```
+
+src/
+├── app/                 # Next.js App Router
+├── components/terminal/ # UI layer
+├── core/terminal/       # CLI engine
+│   ├── ai/              # AI grounding & formatting
+│   ├── commands/        # Command modules
+│   ├── utils/           # Suggestion logic
+│   ├── parser.ts        # Input parser
+│   ├── output.tsx       # Output rendering engine
+│   ├── themes.ts        # Theme system
+│   └── types.ts         # Shared types
+└── data/                # Structured resume JSON
+
+```
+
+### Design Principles
+
+- Separation of data and logic
+- Theme-aware rendering
+- No hardcoded resume content in commands
+- Strict AI grounding
+- Minimal global state
+- Modular extensibility
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- React
+- Tailwind CSS
+- Vercel (deployment)
+
+AI:
+- Structured prompt injection
+- Resume-context grounding
+- Deterministic inference
+
+---
+
+## Commands
+
+```
+
+man              # List all commands
+about            # Profile summary
+education        # Academic background
+projects         # View projects
+skills           # Technical skills
+experience       # Engineering experience
+achievements     # Awards & ranks
+socials          # External links
+theme <name>     # Switch theme
+repo             # Open repository
+ask <question>   # AI-powered resume query
+clear            # Clear terminal
+
+```
+
+---
+
+## Why This Project Exists
+
+This is not a gimmick portfolio.
+
+It demonstrates:
+
+- Command architecture design
+- Clean UI-state separation
+- Context-driven execution
+- Prompt engineering with grounding
+- Defensive AI integration
+- UX polish without over-engineering
+
+It reflects how I think about building systems.
+
+---
+
+## Local Development
+
+```bash
+git clone https://github.com/ksidharth8/terminal-resume
+cd terminal-resume
+npm install
+npm run dev
+```
+
+---
+
+## Deployment
+
+Optimized for Vercel deployment.
+
+No server required.
+
+---
+
+## Future Enhancements
+
+* AI answer caching
+* Structured response modes
+* Multi-session persistence
+* Extended flag support
+* Enhanced accessibility support
+
+---
+
+## Author
+
+Kumar Sidharth
+
+GitHub: [https://github.com/ksidharth8](https://github.com/ksidharth8)
+
+---
+
+## License MIT License
+[License](LICENSE)

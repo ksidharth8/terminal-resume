@@ -1,0 +1,63 @@
+[
+	{
+		"name": "Terminal Resume",
+		"status": "ongoing",
+		"oneLiner": "Browser-based terminal emulator showcasing an interactive CLI-driven portfolio.",
+		"description": "Built a fully interactive terminal interface replicating real shell behavior with structured command parsing, execution context, async output streaming, and session persistence.",
+		"tech": ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+		"highlights": [
+			"Registry-based command architecture with strict separation of data and logic",
+			"Unified async output engine with streaming text and theme-aware rendering",
+			"Autocomplete, history navigation, typo suggestions, limited flags, and man pages",
+			"Session-aware progressive boot sequence",
+			"Grounded AI-powered 'ask' command using constrained prompting"
+		],
+		"live": "https://terminal-resume-iota.vercel.app/",
+		"repo": "https://github.com/ksidharth8/terminal-resume"
+	},
+	{
+		"name": "HireSight",
+		"status": "ongoing",
+		"oneLiner": "AI-powered SaaS platform for resume scoring, job matching, and interview simulation.",
+		"description": "Developed a full-stack career platform with resume analysis, weighted job-skill matching, and AI-driven interview feedback.",
+		"tech": [
+			"TypeScript",
+			"Next.js",
+			"Node.js",
+			"PostgreSQL",
+			"MongoDB",
+			"Cloudinary"
+		],
+		"highlights": [
+			"Hybrid SQL + NoSQL architecture separating authentication from resume workflows",
+			"Stateless JWT authentication with HTTP-only cookies and Google OAuth",
+			"Admin panel for managing jobs and interview questions",
+			"AI-powered structured interview evaluation"
+		],
+		"live": "https://hiresight-iota.vercel.app/",
+		"repo": "https://github.com/ksidharth8/hiresight"
+	},
+	{
+		"name": "ClerkMate",
+		"status": "released",
+		"oneLiner": "CLI-first productivity tool for structured standup logging with AI summaries.",
+		"description": "Built a terminal-first productivity system with offline-first local storage, backend sync, and centralized dashboard.",
+		"tech": [
+			"TypeScript",
+			"Next.js",
+			"Node.js",
+			"MongoDB",
+			"Oclif",
+			"Inquirer"
+		],
+		"highlights": [
+			"Modular CLI architecture with command registry",
+			"Offline-first design with backend synchronization",
+			"AI-powered weekly summaries with fingerprint-based deduplication",
+			"Secure authentication with well-defined API contracts"
+		],
+		"live": "https://clerkmate.vercel.app/",
+		"repo": "https://github.com/ksidharth8/clerkmate",
+		"npm": "https://www.npmjs.com/package/clerkmate"
+	}
+]

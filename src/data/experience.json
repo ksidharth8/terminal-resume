@@ -1,0 +1,13 @@
+[
+	{
+		"title": "Software Engineering Projects",
+		"organization": "Academic & Personal",
+		"duration": "2023 — Present",
+		"description": [
+			"Designed and developed multiple full-stack software systems from scratch",
+			"Applied DSA concepts to optimize logic and improve performance",
+			"Built scalable REST APIs with clean architectural separation",
+			"Implemented authentication, database design, and modular command systems"
+		]
+	}
+]

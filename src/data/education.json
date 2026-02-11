@@ -1,0 +1,20 @@
+[
+	{
+		"institution": "Birla Institute of Technology, Mesra",
+		"degree": "B.Tech in Computer Science and Engineering",
+		"duration": "Sep 2023 — Present",
+		"score": "CGPA: 8.38"
+	},
+	{
+		"institution": "Jawahar Vidya Mandir, Shyamali",
+		"degree": "Senior Secondary (CBSE)",
+		"duration": "Apr 2020 — Mar 2022",
+		"score": "91%"
+	},
+	{
+		"institution": "S.R. D.A.V. Public School, Pundag",
+		"degree": "Matriculation (CBSE)",
+		"duration": "Apr 2019 — Mar 2020",
+		"score": "93%"
+	}
+]

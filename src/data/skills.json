@@ -1,0 +1,20 @@
+{
+	"problem Solving": ["Data Structures", "Algorithmic Analysis"],
+	"computer Fundamentals": [
+		"Object Oriented Programming",
+		"Database Management Systems",
+		"Operating Systems",
+		"Computer Networks"
+	],
+	"languages": [
+		"C/C++",
+		"JavaScript",
+		"TypeScript",
+		"Python",
+		"Java",
+		"HTML/CSS"
+	],
+	"frameworks": ["Next.js", "React", "Node.js", "Express.js"],
+	"databases": ["MongoDB", "MySQL", "PostgreSQL"],
+	"tools": ["VS Code", "Git", "GitHub", "Postman"]
+}
