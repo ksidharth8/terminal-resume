@@ -10,8 +10,8 @@ import {
 export const socialsCommand: Command = {
 	name: "socials",
 	description: "Social profiles",
-	usage: "socials [--github|--linkedin|--leetcode]",
-	flags: ["--github", "--linkedin", "--leetcode"],
+	usage: "socials [--github|--linkedin|--leetcode|--codolio]",
+	flags: ["--github", "--linkedin", "--leetcode", "--codolio"],
 	examples: ["socials", "socials --github"],
 	async execute(args, ctx) {
 		const flag = args[0];
@@ -38,6 +38,7 @@ export const socialsCommand: Command = {
 		await printLinkLine("GitHub", profile.links.github, ctx);
 		await printLinkLine("LinkedIn", profile.links.linkedin, ctx);
 		await printLinkLine("LeetCode", profile.links.leetcode, ctx);
+		await printLinkLine("Codolio", profile.links.codolio, ctx);
 		await printDivider(ctx);
 	},
 };
