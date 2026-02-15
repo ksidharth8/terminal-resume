@@ -15,6 +15,7 @@ import {
 } from "@/core/terminal/output";
 import { APP_VERSION, BOOT_ART } from "@/core/terminal/constants";
 import { suggestCommand } from "@/core/terminal/utils/suggest";
+import { handleContactFlow } from "@/core/terminal/interactive/contactFlow";
 
 type Ctx = {
 	appendLine: (node: React.ReactNode) => void;
@@ -51,6 +52,12 @@ export default function Terminal() {
 	const [history, setHistory] = useState<string[]>([]);
 	const [historyIndex, setHistoryIndex] = useState<number | null>(null);
 	const [booted, setBooted] = useState(false);
+	const [activeQuestion, setActiveQuestion] = useState<string | null>(null);
+	const [interactive, setInteractive] = useState<{
+		type: "contact" | null;
+		step: number;
+		data: any;
+	} | null>(null);
 
 	// 🔹 REFS
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -125,7 +132,35 @@ export default function Terminal() {
 						history={history}
 						historyIndex={historyIndex}
 						setHistoryIndex={setHistoryIndex}
+						hidePrompt={!!interactive}
+						activeQuestion={activeQuestion}
 						onSubmit={async (input) => {
+							if (interactive?.type === "contact") {
+								if (input === "__ESC__") {
+									appendLine(
+										<span className={THEMES[theme].error}>
+											✖ Interaction cancelled.
+										</span>,
+									);
+
+									setInteractive(null);
+									setActiveQuestion(null);
+									return;
+								}
+
+								await handleContactFlow({
+									input,
+									interactive,
+									theme,
+									appendLine,
+									setInteractive,
+									setActiveQuestion,
+									setLines,
+								});
+
+								return;
+							}
+
 							appendLine(
 								<div>
 									<span className="opacity-60">
@@ -164,6 +199,8 @@ export default function Terminal() {
 								clear,
 								setTheme,
 								theme,
+								setInteractive,
+								setActiveQuestion,
 							});
 						}}
 					/>

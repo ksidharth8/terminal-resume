@@ -11,6 +11,7 @@ import { socialsCommand } from "./commands/resume/socials";
 import { educationCommand } from "./commands/resume/education";
 import { achievementsCommand } from "./commands/resume/achievements";
 import { resumeCommand } from "./commands/resume/resume";
+import { contactCommand } from "./commands/contact";
 import { askCommand } from "./commands/ask";
 
 export const COMMANDS: Command[] = [
@@ -26,6 +27,7 @@ export const COMMANDS: Command[] = [
 	achievementsCommand,
 	socialsCommand,
 	resumeCommand,
+	contactCommand,
 	askCommand,
 ];
 

@@ -12,6 +12,8 @@ export default function TerminalInput({
 	setHistoryIndex,
 	theme,
 	inputRef,
+	hidePrompt,
+	activeQuestion,
 }: {
 	onSubmit: (value: string) => void;
 	history: string[];
@@ -19,12 +21,21 @@ export default function TerminalInput({
 	setHistoryIndex: (v: number | null) => void;
 	theme: keyof typeof THEMES;
 	inputRef: React.RefObject<HTMLInputElement>;
+	hidePrompt?: boolean;
+	activeQuestion?: string | null;
 }) {
 	const [value, setValue] = useState("");
 	const [tabIndex, setTabIndex] = useState(0);
 	const [tabBase, setTabBase] = useState<string | null>(null);
 
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+		// ESC — exit interactive mode
+		if (e.key === "Escape") {
+			e.preventDefault();
+			onSubmit("__ESC__");
+			return;
+		}
+
 		// Prevent cursor movement
 		if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
 			e.preventDefault();
@@ -88,7 +99,11 @@ export default function TerminalInput({
 
 	return (
 		<div className="flex items-center gap-2 select-none opacity-95 focus-within:opacity-100">
-			<TerminalPrompt theme={theme} />
+			{activeQuestion ? (
+				<span className={THEMES[theme].accent}>{activeQuestion}</span>
+			) : (
+				!hidePrompt && <TerminalPrompt theme={theme} />
+			)}
 
 			<div className="flex-1 relative">
 				<div className="flex items-center">

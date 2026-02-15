@@ -5,6 +5,12 @@ export type CommandContext = {
 	clear: () => void;
 	setTheme: (theme: keyof typeof THEMES) => void;
 	theme: keyof typeof THEMES;
+	setInteractive: (interactive: {
+		type: "contact" | null;
+		step: number;
+		data: any;
+	}) => void;
+	setActiveQuestion: (question: string | null) => void;
 };
 
 export type Command = {
