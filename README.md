@@ -19,6 +19,7 @@ It replicates real shell behavior including:
 - Manual pages (`man`)
 - Typo suggestions
 - Session persistence
+- Interactive CLI forms (`contact`)
 - Grounded AI assistant (`ask`)
 
 The project is designed with clean separation of concerns and modular architecture.
@@ -32,6 +33,34 @@ The project is designed with clean separation of concerns and modular architectu
 - Structured parser
 - Context-based execution model
 - Modular command metadata
+- Interactive state machine support
+
+### Interactive Contact Command
+
+A fully inquirer-style CLI contact form:
+
+```
+contact
+? Name:
+? Email:
+? Message:
+? Confirm send? (y/n)
+```
+
+
+#### Features:
+- True inline validation (field-level validation before proceeding)
+- No API call until data is valid
+- ESC key support to cancel interaction
+- Async sending with real-time status replacement
+- HTML email template (modern dark UI)
+- Optional LinkedIn redirect after submission
+
+#### Architecture:
+- Interactive flow isolated from terminal engine
+- State-driven multi-step wizard
+- No UI duplication between prompt and history
+- Clean separation of active input vs finalized output
 
 ### Theme System
 - Dracula
@@ -99,6 +128,7 @@ src/
 ├── core/terminal/       # CLI engine
 │   ├── ai/              # AI grounding & formatting
 │   ├── commands/        # Command modules
+|   ├── interactive/     # Interactive CLI flows (contact)
 │   ├── utils/           # Suggestion logic
 │   ├── parser.ts        # Input parser
 │   ├── output.tsx       # Output rendering engine
@@ -146,6 +176,7 @@ skills           # Technical skills
 experience       # Engineering experience
 achievements     # Awards & ranks
 socials          # External links
+contact          # Send message via interactive CLI form
 theme <name>     # Switch theme
 repo             # Open repository
 ask <question>   # AI-powered resume query
@@ -163,6 +194,7 @@ It demonstrates:
 
 - Command architecture design
 - Clean UI-state separation
+- Interactive state machine implementation
 - Context-driven execution
 - Prompt engineering with grounding
 - Defensive AI integration
@@ -197,6 +229,8 @@ No server required.
 * Structured response modes
 * Multi-session persistence
 * Extended flag support
+* Arrow-key interactive selection
+* Loading spinner animation
 * Enhanced accessibility support
 
 ---
