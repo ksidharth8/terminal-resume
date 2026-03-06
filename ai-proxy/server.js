@@ -11,7 +11,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://terminal-resume-iota.vercel.app"
+      "https://terminal-resume-iota.vercel.app",
+      "https://www.ksidharth8.me"
     ]
   })
 );
