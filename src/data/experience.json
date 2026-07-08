@@ -4,10 +4,10 @@
 		"organization": "Academic & Personal",
 		"duration": "2023 — Present",
 		"description": [
-			"Designed and developed multiple full-stack software systems from scratch",
-			"Applied DSA concepts to optimize logic and improve performance",
-			"Built scalable REST APIs with clean architectural separation",
-			"Implemented authentication, database design, and modular command systems"
+			"Designed and developed full-stack, backend-heavy, and GenAI/RAG applications from scratch",
+			"Applied Data Structures, Algorithms, and System Design concepts to build scalable and maintainable systems",
+			"Built REST APIs, real-time WebSocket flows, gRPC-based service communication, and modular backend services",
+			"Implemented authentication, database design, microservice boundaries, RAG pipelines, and AI-assisted workflows"
 		]
 	}
 ]

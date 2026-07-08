@@ -1,5 +1,81 @@
 [
 	{
+		"name": "InvestEdge",
+		"status": "completed",
+		"oneLiner": "Microservices-based stock broker simulation with real-time market data, order execution, portfolio tracking, and notifications.",
+		"description": "Built a stock broker platform inspired by Zerodha and Upstox, focusing on backend service ownership, real-time communication, broker API integration, risk validation, and trading workflow safety.",
+		"tech": [
+			"Next.js",
+			"Node.js",
+			"Express.js",
+			"Socket.IO",
+			"gRPC",
+			"PostgreSQL",
+			"MongoDB",
+			"Firebase",
+			"Upstox API",
+			"OpenSearch"
+		],
+		"highlights": [
+			"Built real-time market data streaming with live price updates, watchlists, charts, portfolio valuation, and trading dashboard integration",
+			"Designed clear service boundaries across auth, market data, watchlist, order manager, risk management, portfolio, reports, user manager, and notifications",
+			"Implemented broker-style order flow with gRPC-based RMS validation before execution, sandbox/live execution separation, and local order ledger persistence",
+			"Built backend-driven portfolio, holdings, trade reports, realized P&L, unrealized P&L, and execution-mode filtering",
+			"Integrated Firebase Cloud Messaging for browser notifications on order placement, cancellation, RMS rejection, and test events"
+		],
+		"repo": "https://github.com/ksidharth8/investedge"
+	},
+	{
+		"name": "HireSight",
+		"status": "completed",
+		"oneLiner": "AI-powered SaaS platform for resume scoring, job matching, and interview simulation.",
+		"description": "Developed a full-stack career platform for students and freshers with resume analysis, job compatibility scoring, interview simulation, and AI-generated feedback.",
+		"tech": [
+			"Next.js",
+			"Node.js",
+			"Express.js",
+			"PostgreSQL",
+			"MongoDB",
+			"Prisma",
+			"Mongoose",
+			"Cloudinary"
+		],
+		"highlights": [
+			"Built resume analysis, job matching, interview simulation, resume history, compatibility scoring, and AI-generated feedback workflows",
+			"Implemented JWT cookie authentication, Google OAuth, PDF upload handling, and protected dashboard routes",
+			"Designed session-safe interview submission to prevent partial database writes when users abandon interviews",
+			"Separated structured auth data from flexible resume, job, and interview records using PostgreSQL and MongoDB",
+			"Tested complete user flows across auth, resume upload, job matching, interview start, submission, feedback, and review"
+		],
+		"live": "https://hiresight-iota.vercel.app/",
+		"repo": "https://github.com/ksidharth8/hiresight"
+	},
+	{
+		"name": "MultiSource RAG Assistant",
+		"status": "completed",
+		"oneLiner": "Production-style GenAI application for grounded question answering over multiple source types.",
+		"description": "Built a Retrieval-Augmented Generation assistant that ingests user-provided knowledge sources, stores embeddings in a vector database, retrieves relevant chunks, and generates grounded answers with visible source evidence.",
+		"tech": [
+			"Python",
+			"FastAPI",
+			"Next.js",
+			"Supabase Postgres",
+			"pgvector",
+			"Sentence Transformers",
+			"Groq",
+			"PyMuPDF",
+			"BeautifulSoup"
+		],
+		"highlights": [
+			"Supported ingestion from raw text, PDF, TXT, Markdown, DOCX, PPTX, website URLs, and YouTube transcripts",
+			"Implemented the complete RAG pipeline with text extraction, cleaning, chunking, embedding generation, pgvector storage, semantic retrieval, and grounded LLM answering",
+			"Returned visible source evidence with source type, source name, chunk index, similarity score, retrieved text, and collection statistics",
+			"Built collection-based workspaces for separating knowledge bases such as DSA notes, system design notes, and GenAI interview material",
+			"Added dashboard features including collection selector, ingestion panel, evidence panel, local memory, activity log, backend health status, and duplicate source feedback"
+		],
+		"repo": "https://github.com/ksidharth8/multisource-rag-assistant"
+	},
+	{
 		"name": "Terminal Resume",
 		"status": "ongoing",
 		"oneLiner": "Browser-based terminal emulator showcasing an interactive CLI-driven portfolio.",
@@ -10,32 +86,10 @@
 			"Unified async output engine with streaming text and theme-aware rendering",
 			"Autocomplete, history navigation, typo suggestions, limited flags, and man pages",
 			"Session-aware progressive boot sequence",
-			"Grounded AI-powered 'ask' command using constrained prompting"
+			"Grounded AI-powered ask command using constrained prompting"
 		],
 		"live": "https://terminal-resume-iota.vercel.app/",
 		"repo": "https://github.com/ksidharth8/terminal-resume"
-	},
-	{
-		"name": "HireSight",
-		"status": "completed",
-		"oneLiner": "AI-powered SaaS platform for resume scoring, job matching, and interview simulation.",
-		"description": "Developed a full-stack career platform with resume analysis, weighted job-skill matching, and AI-driven interview feedback.",
-		"tech": [
-			"TypeScript",
-			"Next.js",
-			"Node.js",
-			"PostgreSQL",
-			"MongoDB",
-			"Cloudinary"
-		],
-		"highlights": [
-			"Hybrid SQL + NoSQL architecture separating authentication from resume workflows",
-			"Stateless JWT authentication with HTTP-only cookies and Google OAuth",
-			"Admin panel for managing jobs and interview questions",
-			"AI-powered structured interview evaluation"
-		],
-		"live": "https://hiresight-iota.vercel.app/",
-		"repo": "https://github.com/ksidharth8/hiresight"
 	},
 	{
 		"name": "ClerkMate",

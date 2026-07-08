@@ -1,20 +1,50 @@
 {
-	"problem Solving": ["Data Structures", "Algorithmic Analysis"],
+	"problem Solving": ["Data Structures", "Algorithms"],
 	"computer Fundamentals": [
 		"Object Oriented Programming",
 		"Database Management Systems",
 		"Operating Systems",
 		"Computer Networks"
 	],
-	"languages": [
-		"C/C++",
-		"JavaScript",
-		"TypeScript",
-		"Python",
-		"Java",
-		"HTML/CSS"
+	"system Design": [
+		"Microservices",
+		"Distributed Systems",
+		"API Design",
+		"Caching",
+		"Load Balancing",
+		"Message Queues",
+		"Rate Limiting"
 	],
-	"frameworks": ["Next.js", "React", "Node.js", "Express.js"],
-	"databases": ["MongoDB", "MySQL", "PostgreSQL"],
-	"tools": ["VS Code", "Git", "GitHub", "Postman"]
+	"backend Engineering": [
+		"Node.js",
+		"Express.js",
+		"REST APIs",
+		"WebSockets",
+		"gRPC",
+		"JWT",
+		"OAuth"
+	],
+	"frontend & Databases": [
+		"React",
+		"Next.js",
+		"Tailwind CSS",
+		"PostgreSQL",
+		"MongoDB",
+		"MySQL",
+		"Supabase",
+		"pgvector"
+	],
+	"ai & GenAI": [
+		"LLMs",
+		"RAG",
+		"LangChain",
+		"LangGraph",
+		"AI Agents",
+		"Prompt Engineering",
+		"Vector Databases",
+		"Embeddings",
+		"Sentence Transformers"
+	],
+	"languages": ["C++", "TypeScript", "JavaScript", "Python", "Java"],
+	"tools": ["Git", "GitHub", "Docker", "Postman", "VS Code"]
 }

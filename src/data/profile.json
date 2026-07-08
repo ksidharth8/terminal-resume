@@ -4,8 +4,9 @@
 	"location": "Ranchi, Jharkhand, India",
 	"phone": "+91-9693701647",
 	"email": "kumarsidharth333@gmail.com",
-	"summary": "Computer Science undergraduate with strong foundations in Data Structures and Algorithms and hands-on experience building scalable full-stack applications using TypeScript, Next.js, and Node.js. Focused on clean architecture, system design fundamentals, and applying algorithmic thinking to real-world problems.",
+	"summary": "Computer Science undergraduate with strong foundations in Data Structures, Algorithms, System Design, and Backend Engineering. Experienced in building GenAI/RAG and full-stack applications with practical focus on scalable architecture, clean APIs, and maintainable systems. Built projects across microservices, real-time systems, RAG pipelines, and SaaS workflows.",
 	"links": {
+		"portfolio": "https://www.ksidharth8.me/",
 		"github": "https://github.com/ksidharth8",
 		"linkedin": "https://www.linkedin.com/in/ksidharth8/",
 		"leetcode": "https://leetcode.com/u/ksidharth8/",
