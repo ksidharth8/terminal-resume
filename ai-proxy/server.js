@@ -18,7 +18,7 @@ app.use(
 );
 
 const API_URL = "https://api.pawan.krd/v1/chat/completions";
-const MODEL = "gpt-oss-20b";
+const MODEL = "openai/gpt-oss-20b";
 
 app.post("/ask", async (req, res) => {
   try {
@@ -29,17 +29,18 @@ app.post("/ask", async (req, res) => {
     }
 
     const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.PAWAN_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: MODEL,
-        temperature: 0.2,
-        messages: [{ role: "user", content: prompt }]
-      })
-    });
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: `Bearer ${process.env.PAWAN_API_KEY}`,
+			},
+			body: JSON.stringify({
+				model: MODEL,
+				temperature: 0.3,
+				max_tokens: 4096,
+				messages: [{ role: "user", content: prompt }],
+			})
+		});
 
     const data = await response.json();
 
